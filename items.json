@@ -1,0 +1,102 @@
+[
+    {
+        "id": "c33b0e6b-8b0e-4d3b-9a00-1c33a1e4ef00",
+        "name": "Nasi Goreng",
+        "price": 25000
+    },
+    {
+        "id": "a8123c4d-f0e4-4a25-b3cf-31d9c2441c2d",
+        "name": "Mie Goreng",
+        "price": 20000
+    },
+    {
+        "id": "9b7237a9-2442-4d75-8d25-9b88203c5d7a",
+        "name": "Sate Ayam",
+        "price": 15000
+    },
+    {
+        "id": "fe3a9c91-8456-4ac2-ae02-162d37711d11",
+        "name": "Gado-Gado",
+        "price": 18000
+    },
+    {
+        "id": "2a1f0e5d-76a8-4b8b-9d7a-f3f005e2c5f0",
+        "name": "Rendang",
+        "price": 30000
+    },
+    {
+        "id": "dbd9e7a5-1d8f-48a3-a348-f94d78bb204b",
+        "name": "Bakso",
+        "price": 12000
+    },
+    {
+        "id": "4a47e356-9094-41bf-9fb7-8db7b470fe41",
+        "name": "Nasi Padang",
+        "price": 22000
+    },
+    {
+        "id": "e20f5c39-6674-4d0e-9fbd-0b68ba2a5bb1",
+        "name": "Soto Ayam",
+        "price": 16000
+    },
+    {
+        "id": "3a4e1ec7-6df3-4f88-81b2-b3a4a22b5d78",
+        "name": "Martabak",
+        "price": 25000
+    },
+    {
+        "id": "a2a593d8-36c2-4be0-81f7-7e19fe7e4ba6",
+        "name": "Sop Buntut",
+        "price": 35000
+    },
+    {
+        "id": "7f1c3c7d-063d-4c16-bdcd-656f564b9f42",
+        "name": "Es Teh Manis",
+        "price": 5000
+    },
+    {
+        "id": "d4af8d3a-b5da-4f89-a09e-1cde14963a7e",
+        "name": "Es Jeruk",
+        "price": 6000
+    },
+    {
+        "id": "8a77c6a5-8e25-40b3-864d-235fe3ff57fc",
+        "name": "Cendol",
+        "price": 8000
+    },
+    {
+        "id": "5bb20802-b26e-4f12-b757-d7e1f9b5e5a3",
+        "name": "Kopi Tubruk",
+        "price": 12000
+    },
+    {
+        "id": "a3e950f9-9333-48f1-a82a-775ed3c070d9",
+        "name": "Teh Tarik",
+        "price": 7000
+    },
+    {
+        "id": "3e2ee373-c1ea-403a-a94b-5c3b6a20f476",
+        "name": "Jus Alpukat",
+        "price": 10000
+    },
+    {
+        "id": "96f7ef2b-5b1b-4d33-93cc-3cf0f9f8e285",
+        "name": "Soda Gembira",
+        "price": 9000
+    },
+    {
+        "id": "03d1d849-1581-450a-97b3-539cf6e29564",
+        "name": "Air Kelapa",
+        "price": 10000
+    },
+    {
+        "id": "a83acccf-51c1-42b4-9f96-ff9e20ebc092",
+        "name": "Jus Mangga",
+        "price": 11000
+    },
+    {
+        "id": "92fe6506-9264-4a9d-9d19-d130be0f3d0e",
+        "name": "Es Campur",
+        "price": 12000
+    }
+]

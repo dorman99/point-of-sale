@@ -1,0 +1,48 @@
+[
+    {
+        "id": "1dc90529-29e2-4c4f-b10a-29cf01cde874",
+        "total": 50000,
+        "status": "ToDo",
+        "orderItems": [
+            {
+                "item": {
+                    "id": "c33b0e6b-8b0e-4d3b-9a00-1c33a1e4ef00",
+                    "name": "Nasi Goreng",
+                    "price": 25000
+                },
+                "quantity": 1
+            },
+            {
+                "item": {
+                    "id": "c33b0e6b-8b0e-4d3b-9a00-1c33a1e4ef00",
+                    "name": "Nasi Goreng",
+                    "price": 25000
+                },
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "d5fd8911-ea4f-462e-9653-03f36df2bc74",
+        "total": 50000,
+        "status": "ToDo",
+        "orderItems": [
+            {
+                "item": {
+                    "id": "c33b0e6b-8b0e-4d3b-9a00-1c33a1e4ef00",
+                    "name": "Nasi Goreng (pedes)",
+                    "price": 25000
+                },
+                "quantity": 1
+            },
+            {
+                "item": {
+                    "id": "c33b0e6b-8b0e-4d3b-9a00-1c33a1e4ef00",
+                    "name": "Nasi Goreng",
+                    "price": 25000
+                },
+                "quantity": 1
+            }
+        ]
+    }
+]

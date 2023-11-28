@@ -1,0 +1,11 @@
+main feature
+- can see items
+- can create order
+- can upate order status
+
+
+- initial commit 29 nov 2023
+    - setup repo
+    - setup static db
+    - setup service
+- 

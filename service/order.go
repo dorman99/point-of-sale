@@ -33,3 +33,26 @@ func UpdateOrder(payload common.UpdateOrderRequestDto) {
 
 	repository.UpdateOrders(orders)
 }
+
+func ProcessIncomingOrder(order model.Order) {
+	log.Println("Process incoming order: ", order.Id, " in ", order.PrepTime)
+	payload := common.UpdateOrderRequestDto{
+		Id:     order.Id,
+		Status: common.OrderStatus["InProgress"],
+	}
+
+	log.Println("Order In Progress...")
+
+	UpdateOrder(payload)
+
+	time.Sleep(order.PrepTime)
+
+	payload = common.UpdateOrderRequestDto{
+		Id:     order.Id,
+		Status: common.OrderStatus["Ready"],
+	}
+
+	UpdateOrder(payload)
+
+	log.Printf("OrderId %v Is Done!\n", order.Id)
+}

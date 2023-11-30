@@ -6,4 +6,5 @@ var OrderStatus = map[string]TOrderStatus{
 	"Todo":       "Todo",
 	"InProgress": "InProgress",
 	"Done":       "Done",
+	"Ready":      "Ready",
 }

@@ -40,8 +40,10 @@ func OrdersHandler(w http.ResponseWriter, r *http.Request) {
 		var orderItem []model.OrderItem
 		util.ParseRequestBody(r, &orderItem)
 
-		orders := service.CreateOrder(orderItem)
-		response := util.ParseResponseBody(orders)
+		order := service.CreateOrder(orderItem)
+		response := util.ParseResponseBody(order)
+
+		go service.ProcessIncomingOrder(order)
 
 		w.WriteHeader(http.StatusOK)
 		w.Write(response)

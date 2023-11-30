@@ -1,15 +1,33 @@
 main feature
-- can see items
-- can create order
-- can upate order status
+- can see items (check)
+- can create order [check]
+- can update order status [check]
+- can see order status by id
+- add prepTime: amount * 10 second [check]
+
+containerization
+- setup docker
+- setup to minikube
 
 concurrentcy
 - setup go routine
-    - spawn go routine to handle to incoming order
+    - spawn go routine to handle to incoming order [check]
+        - once order == ToDo
+        - it will spawn other go routine, that will be done based on the "prepTime"
+
+
+tech debt:
+- handler error response
+- create controller
+- better logging (find module for this one?)
+
 
 
 - initial commit 29 nov 2023
     - setup repo
     - setup static db
     - setup service
-- 
+
+- commit 30 nov 2023
+    - update order status api
+    - utils for response n request body

@@ -9,7 +9,7 @@ import (
 	"github.com/dorman99/point-of-sales/util"
 )
 
-func CreateOrder(orderItems []model.OrderItem) []model.Order {
+func CreateOrder(orderItems []model.OrderItem) model.Order {
 	orders := repository.FindAllOrders()
 
 	// caculate order items
@@ -17,6 +17,7 @@ func CreateOrder(orderItems []model.OrderItem) []model.Order {
 		Id:         util.GenerateUUID(),
 		Status:     string(common.OrderStatus["Todo"]),
 		OrderItems: orderItems,
+		PrepTime:   calculatePrepTime(orderItems),
 		Total:      calculateOrderItems(orderItems),
 		CreatedAt:  time.Now(),
 		UpdatedAt:  time.Now(),
@@ -26,7 +27,7 @@ func CreateOrder(orderItems []model.OrderItem) []model.Order {
 
 	repository.UpdateOrders(orders)
 
-	return orders
+	return order
 }
 
 func calculateOrderItems(orderItems []model.OrderItem) int {
@@ -35,4 +36,10 @@ func calculateOrderItems(orderItems []model.OrderItem) int {
 		res += (o.Quantity * o.Item.Price)
 	}
 	return res
+}
+
+func calculatePrepTime(oi []model.OrderItem) time.Duration {
+	secondsPerItems := 5
+	totalInSeconds := secondsPerItems * len(oi)
+	return time.Duration(time.Second * time.Duration(totalInSeconds))
 }

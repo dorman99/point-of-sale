@@ -1,8 +1,9 @@
 [
     {
-        "id": "dc8984d7-131d-41d9-9b27-f5b3c1e92c4e",
+        "id": "1bc29559-90f3-4e0b-95aa-49fe5bec6e5d",
         "total": 50000,
-        "status": "Done",
+        "status": "Ready",
+        "prepTime": 10000000000,
         "orderItems": [
             {
                 "item": {
@@ -21,13 +22,14 @@
                 "quantity": 1
             }
         ],
-        "createdAt": "2023-11-30T22:49:44.900155+07:00",
-        "updatedAt": "2023-11-30T23:04:00.676679+07:00"
+        "createdAt": "2023-11-30T23:39:32.368919+07:00",
+        "updatedAt": "2023-11-30T23:39:42.371358+07:00"
     },
     {
-        "id": "a60818ec-69b5-44e3-9ce6-e1f74906f217",
+        "id": "34fcfaba-5f56-413a-b11c-16291b1c7c0e",
         "total": 50000,
-        "status": "Todo",
+        "status": "Ready",
+        "prepTime": 10000000000,
         "orderItems": [
             {
                 "item": {
@@ -46,7 +48,85 @@
                 "quantity": 1
             }
         ],
-        "createdAt": "2023-11-30T22:56:17.712335+07:00",
-        "updatedAt": "2023-11-30T22:56:17.712335+07:00"
+        "createdAt": "2023-11-30T23:39:33.495239+07:00",
+        "updatedAt": "2023-11-30T23:39:43.496996+07:00"
+    },
+    {
+        "id": "50edb721-af7c-49d1-9868-ac97d18fcb62",
+        "total": 50000,
+        "status": "Ready",
+        "prepTime": 10000000000,
+        "orderItems": [
+            {
+                "item": {
+                    "id": "c33b0e6b-8b0e-4d3b-9a00-1c33a1e4ef00",
+                    "name": "Nasi Goreng (pedes)",
+                    "price": 25000
+                },
+                "quantity": 1
+            },
+            {
+                "item": {
+                    "id": "c33b0e6b-8b0e-4d3b-9a00-1c33a1e4ef00",
+                    "name": "Nasi Goreng",
+                    "price": 25000
+                },
+                "quantity": 1
+            }
+        ],
+        "createdAt": "2023-11-30T23:39:34.298846+07:00",
+        "updatedAt": "2023-11-30T23:39:44.300995+07:00"
+    },
+    {
+        "id": "0a334aaf-076d-4e7e-9751-ab4209237c0d",
+        "total": 50000,
+        "status": "Ready",
+        "prepTime": 10000000000,
+        "orderItems": [
+            {
+                "item": {
+                    "id": "c33b0e6b-8b0e-4d3b-9a00-1c33a1e4ef00",
+                    "name": "Nasi Goreng (pedes)",
+                    "price": 25000
+                },
+                "quantity": 1
+            },
+            {
+                "item": {
+                    "id": "c33b0e6b-8b0e-4d3b-9a00-1c33a1e4ef00",
+                    "name": "Nasi Goreng",
+                    "price": 25000
+                },
+                "quantity": 1
+            }
+        ],
+        "createdAt": "2023-11-30T23:39:35.014824+07:00",
+        "updatedAt": "2023-11-30T23:39:45.017012+07:00"
+    },
+    {
+        "id": "d18dd2c1-3b98-4482-91d6-3983f7d1e624",
+        "total": 50000,
+        "status": "Ready",
+        "prepTime": 10000000000,
+        "orderItems": [
+            {
+                "item": {
+                    "id": "c33b0e6b-8b0e-4d3b-9a00-1c33a1e4ef00",
+                    "name": "Nasi Goreng (pedes)",
+                    "price": 25000
+                },
+                "quantity": 1
+            },
+            {
+                "item": {
+                    "id": "c33b0e6b-8b0e-4d3b-9a00-1c33a1e4ef00",
+                    "name": "Nasi Goreng",
+                    "price": 25000
+                },
+                "quantity": 1
+            }
+        ],
+        "createdAt": "2023-11-30T23:39:35.583851+07:00",
+        "updatedAt": "2023-11-30T23:39:45.586062+07:00"
     }
 ]

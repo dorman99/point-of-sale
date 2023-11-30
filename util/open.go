@@ -2,7 +2,7 @@ package util
 
 import (
 	"encoding/json"
-	"io/ioutil"
+	"io"
 	"log"
 	"os"
 )
@@ -16,7 +16,7 @@ func OpenFile(path string, target interface{}) interface{} {
 
 	defer file.Close()
 
-	data, err := ioutil.ReadAll(file)
+	data, err := io.ReadAll(file)
 
 	if err != nil {
 		log.Fatalln("error read file ", path, err)
@@ -39,5 +39,5 @@ func SaveFile(path string, data interface{}) {
 		log.Fatalln("failed to save to ", path, err)
 	}
 
-	ioutil.WriteFile(path, jsonData, 0644)
+	os.WriteFile(path, jsonData, 0644)
 }

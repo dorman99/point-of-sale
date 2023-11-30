@@ -1,8 +1,9 @@
 package service
 
 import (
-	"log"
+	"time"
 
+	"github.com/dorman99/point-of-sales/common"
 	"github.com/dorman99/point-of-sales/model"
 	"github.com/dorman99/point-of-sales/repository"
 	"github.com/dorman99/point-of-sales/util"
@@ -14,12 +15,12 @@ func CreateOrder(orderItems []model.OrderItem) []model.Order {
 	// caculate order items
 	order := model.Order{
 		Id:         util.GenerateUUID(),
-		Status:     "ToDo",
+		Status:     string(common.OrderStatus["Todo"]),
 		OrderItems: orderItems,
 		Total:      calculateOrderItems(orderItems),
+		CreatedAt:  time.Now(),
+		UpdatedAt:  time.Now(),
 	}
-
-	log.Println(orders)
 
 	orders = append(orders, order)
 

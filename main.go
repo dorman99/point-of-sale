@@ -1,19 +1,14 @@
 package main
 
 import (
-	"encoding/json"
-	"io/ioutil"
 	"log"
 	"net/http"
 
+	"github.com/dorman99/point-of-sales/common"
 	"github.com/dorman99/point-of-sales/model"
 	"github.com/dorman99/point-of-sales/service"
+	"github.com/dorman99/point-of-sales/util"
 )
-
-type ResponseData struct {
-	Success string      `json:"success"`
-	Data    interface{} `json:"data"`
-}
 
 func HealthCheck(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
@@ -29,16 +24,10 @@ func ItemsHandler(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
 		w.WriteHeader(http.StatusOK)
+
 		items := service.FindAllItems()
-		responsePayload := ResponseData{
-			Success: "oke!",
-			Data:    items,
-		}
-		response, err := json.Marshal(responsePayload)
-		if err != nil {
-			log.Fatalln("failed to retrived items")
-			return
-		}
+		response := util.ParseResponseBody(items)
+
 		w.WriteHeader(http.StatusOK)
 		w.Write(response)
 	}
@@ -48,29 +37,28 @@ func OrdersHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/jsonƒ")
 	switch r.Method {
 	case "POST":
-		body, err := ioutil.ReadAll(r.Body)
-
-		if err != nil {
-			log.Fatalln("error read body", r.URL)
-		}
-
 		var orderItem []model.OrderItem
-		err = json.Unmarshal(body, &orderItem)
-
-		if err != nil {
-			log.Fatalln("error", r.URL, err)
-		}
+		util.ParseRequestBody(r, &orderItem)
 
 		orders := service.CreateOrder(orderItem)
+		response := util.ParseResponseBody(orders)
 
 		w.WriteHeader(http.StatusOK)
+		w.Write(response)
+	}
+}
 
-		responsePayload := ResponseData{
-			Success: "oke!",
-			Data:    orders,
-		}
+func OrderAdminHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	switch r.Method {
+	case "POST":
+		var requestUpdateStatus common.UpdateOrderRequestDto
+		util.ParseRequestBody(r, &requestUpdateStatus)
+		service.UpdateOrder(requestUpdateStatus)
 
-		response, _ := json.Marshal(responsePayload)
+		response := util.ParseResponseBody(nil)
+
+		w.WriteHeader(http.StatusOK)
 		w.Write(response)
 	}
 }
@@ -79,6 +67,7 @@ func main() {
 	http.HandleFunc("/health-check", HealthCheck)
 	http.HandleFunc("/items", ItemsHandler)
 	http.HandleFunc("/orders", OrdersHandler)
+	http.HandleFunc("/admin/orders", OrderAdminHandler)
 	log.Println("Application is Running: 8001")
 	log.Fatal(http.ListenAndServe(":8001", nil))
 }

@@ -3,6 +3,10 @@ main feature
 - can create order
 - can upate order status
 
+concurrentcy
+- setup go routine
+    - spawn go routine to handle to incoming order
+
 
 - initial commit 29 nov 2023
     - setup repo
